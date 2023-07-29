@@ -4,13 +4,17 @@ Este repositório contem o frontend do sistema ESM Forum, implementado agora em 
 
 O backend do sistema continua disponível neste [repositório](https://github.com/mtov/esmforum).
 
-Para instalar as dependências do frontend:
+Para instalar o frontend, primeiro clone o repositório:
+
+``` git clone https://github.com/mtov/esmforum-react.git```
+
+Em seguida, instale as dependências do frontend:
 
 ```
 npm install
 ```
 
-Para executar o frontend:
+E, por fim, para executar o frontend use:
 
 ```
 npm start
