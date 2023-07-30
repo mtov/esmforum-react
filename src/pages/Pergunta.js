@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { Container, Table, Form, Button } from 'react-bootstrap';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 function postPergunta(pergunta, update) {
   const request = {
     method: 'POST',
@@ -40,16 +38,16 @@ function NovaPergunta(props) {
   );
 }
 
-function Home() {
+function Pergunta() {
   const [listaPerguntas, setListaPerguntas] = React.useState([]);
 
-  function adicionarNovaPergunta(id, texto) {
+  function adicionarNovaPergunta(id_pergunta, pergunta) {
     setListaPerguntas((prev) => {
-        const novaPergunta = {
-          id_pergunta: id,
-          texto: texto,
-          num_respostas: 0,
-        };
+      const novaPergunta = {
+        id_pergunta: id_pergunta,
+        texto: pergunta,
+        num_respostas: 0,
+      };
       return [...prev, novaPergunta];
     });
   }
@@ -59,24 +57,28 @@ function Home() {
     function LinhaTabela({ pergunta }) {
       return (
         <tr>
-          <td>{pergunta.id_pergunta}</td>
-          <td>{pergunta.texto}</td>
-          <td><Link to = {`/resposta/${pergunta.id_pergunta}`}>{pergunta.num_respostas}</Link></td>
+          <td className="text-center"> {pergunta.id_pergunta} </td>
+          <td> {pergunta.texto} </td>
+          <td className="text-center"> 
+              <Link to = {`/resposta/${pergunta.id_pergunta}`}> 
+                 {pergunta.num_respostas}
+              </Link>
+          </td>
         </tr>
       );
     }
 
     function TabelaPrincipal() {
-      const linhas = listaPerguntas.map(p => ( <LinhaTabela pergunta={p} key={p.id} /> ));  
+      const linhas = listaPerguntas.map(p => ( <LinhaTabela pergunta={p} key={p.id_pergunta} /> ));  
       return (
         <div className="container">
           <center><h5>Peguntas Atuais</h5></center>
           <Table striped bordered>
             <thead>
               <tr>
-                <th>ID</th>
-                <th>Pergunta</th>
-                <th># Respostas</th>
+                <th className="text-center">ID</th>
+                <th className="text-center">Pergunta</th>
+                <th className="text-center"># Respostas</th>
               </tr>
             </thead>
             <tbody>
@@ -108,4 +110,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Pergunta;

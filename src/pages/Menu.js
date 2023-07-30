@@ -1,6 +1,5 @@
 import React from 'react';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
 import { Outlet } from "react-router-dom";
@@ -15,7 +14,7 @@ function Menu () {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <LinkContainer to="/">
-                <Nav.Link>Home</Nav.Link>
+                <Nav.Link>Perguntas</Nav.Link>
               </LinkContainer>
               <LinkContainer to="/sobre">
                 <Nav.Link>Sobre</Nav.Link>
