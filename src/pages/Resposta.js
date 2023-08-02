@@ -71,7 +71,7 @@ function Resposta() {
         <div className="container">
           <center><h6>Respostas</h6></center>
           <Table striped bordered>
-            <tbody> {linhas} </tbody>
+            <tbody>{linhas}</tbody>
           </Table>
         </div>
       );

@@ -26,7 +26,6 @@ function Menu () {
       <Outlet />
     </div>
   );
-
 }
   
 export default Menu;
