@@ -33,3 +33,6 @@ A implementação do frontend é constituída por cinco arquivos principais:
 * Pages/Pergunta.js: implementa dois componentes, `Pergunta` e `NovaPergunta`, conforme ilustrado na figura abaixo.
 * Pages/Resposta.js: implementa dois componentes, `Resposta` e `NovaReposta`, bastante similares àqueles da página de Pergunta.
 * Pages/Sobre.js: implementa um componente que mostra a página com informações sobre o sistema
+
+![Componentes da página principal](docs/componentes.png)
+
