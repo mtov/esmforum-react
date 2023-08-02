@@ -29,9 +29,9 @@ npm start
 A implementação do frontend é constituída por cinco arquivos principais:
 
 * index.js: ponto de entrada da aplicação
-* Pages/Menu.js: implementa um componente `Menu` que renderiza o menu do topo da página
-* Pages/Pergunta.js: implementa dois componentes, `Pergunta` e `NovaPergunta`, conforme ilustrado na figura abaixo.
-* Pages/Resposta.js: implementa dois componentes, `Resposta` e `NovaReposta`, bastante similares àqueles da página de Pergunta.
+* Pages/Menu.js: implementa um componente `Menu()` que renderiza o menu do topo da página
+* Pages/Pergunta.js: implementa dois componentes, `Pergunta()` e `NovaPergunta()`, conforme ilustrado na figura abaixo.
+* Pages/Resposta.js: implementa dois componentes, `Resposta()` e `NovaReposta()`, similares àqueles da página de Pergunta.
 * Pages/Sobre.js: implementa um componente que mostra a página com informações sobre o sistema
 
 ![Componentes da página principal](docs/componentes.png)
