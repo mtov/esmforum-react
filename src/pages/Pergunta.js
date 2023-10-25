@@ -30,9 +30,9 @@ function NovaPergunta(props) {
       <Form>
         <Form.Group>
           <Form.Label> Faça a sua pergunta: </Form.Label>
-          <Form.Control as="textarea" value={texto} onChange={handleChange}/>
+          <Form.Control id="textarea-pergunta" as="textarea" value={texto} onChange={handleChange}/>
         </Form.Group>
-        <Button onClick={handleClick}>Enviar</Button>
+        <Button id="btn-pergunta" onClick={handleClick}>Enviar</Button>
       </Form>
     </Container>
   );
@@ -73,7 +73,7 @@ function Pergunta() {
       return (
         <div className="container">
           <center><h5>Peguntas Atuais</h5></center>
-          <Table striped bordered>
+          <Table id="tabela-perguntas" striped bordered>
             <thead>
               <tr>
                 <th className="text-center">ID</th>

@@ -33,9 +33,9 @@ function NovaResposta(props) {
       <Form>
         <Form.Group>
           <Form.Label> Dê a sua resposta: </Form.Label>
-          <Form.Control as="textarea" value={texto} onChange={handleChange}/>
+          <Form.Control id="textarea-resposta" as="textarea" value={texto} onChange={handleChange}/>
         </Form.Group>
-        <Button onClick={handleClick}>Enviar</Button>
+        <Button id="btn-resposta" onClick={handleClick}>Enviar</Button>
       </Form>
     </Container>
   );
@@ -70,7 +70,7 @@ function Resposta() {
       return (
         <div className="container">
           <center><h6>Respostas</h6></center>
-          <Table striped bordered>
+          <Table id="tabela-respostas" striped bordered>
             <tbody>{linhas}</tbody>
           </Table>
         </div>
